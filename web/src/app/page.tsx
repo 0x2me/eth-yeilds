@@ -1,4 +1,4 @@
-import MatrixChat from "@/components/MatrixChat";
+// import MatrixChat from "@/components/MatrixChat";
 import YieldComparison from "@/components/YieldComparison";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -9,28 +9,34 @@ export default function HomePage() {
       {/* Header */}
       <header className="border-b border-border/50 bg-card/30 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">E</span>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-foreground">ETH Yields</h1>
-                  <p className="text-xs text-muted-foreground">Ethereum Yield Platform</p>
-                </div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">
+                  E
+                </span>
               </div>
-              
-              <nav className="flex items-center gap-4">
-                <Button variant="outline">Home</Button>
-                <Link href="/portfolio">
-                  <Button variant="ghost">Portfolio</Button>
-                </Link>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                  <span>Live Market Data</span>
-                </div>
-              </nav>
+              <div>
+                <h1 className="text-xl font-bold text-foreground">
+                  ETH Yields
+                </h1>
+                <p className="text-xs text-muted-foreground">
+                  Ethereum Yield Platform
+                </p>
+              </div>
             </div>
+
+            <nav className="flex items-center gap-4">
+              <Button variant="outline">Home</Button>
+              <Link href="/portfolio">
+                <Button variant="ghost">Portfolio</Button>
+              </Link>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span>Live Market Data</span>
+              </div>
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -40,10 +46,11 @@ export default function HomePage() {
           <div className="text-center space-y-2">
             <h2 className="text-2xl font-bold text-foreground">Yield Bots</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Get personalized DeFi strategies, yield optimization, and real-time opportunities from our advanced Yield Bots.
+              Get personalized DeFi strategies, yield optimization, and
+              real-time opportunities from our advanced Yield Bots.
             </p>
           </div>
-          
+
           {/* Matrix Chat Interface - Coming Soon */}
           <div className="w-full max-w-4xl mx-auto">
             {/* Matrix Header */}
@@ -72,13 +79,20 @@ export default function HomePage() {
                   COMING SOON
                 </div>
                 <div className="text-matrix-green-dim font-mono text-sm max-w-md mx-auto">
-                  Advanced AI yield optimization bots are being trained on DeFi protocols. 
-                  Get ready for personalized strategies and real-time opportunities.
+                  Advanced AI yield optimization bots are being trained on DeFi
+                  protocols. Get ready for personalized strategies and real-time
+                  opportunities.
                 </div>
                 <div className="flex justify-center items-center gap-2 mt-6">
                   <div className="w-2 h-2 bg-matrix-green rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-matrix-green rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                  <div className="w-2 h-2 bg-matrix-green rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                  <div
+                    className="w-2 h-2 bg-matrix-green rounded-full animate-pulse"
+                    style={{ animationDelay: "0.2s" }}
+                  ></div>
+                  <div
+                    className="w-2 h-2 bg-matrix-green rounded-full animate-pulse"
+                    style={{ animationDelay: "0.4s" }}
+                  ></div>
                 </div>
               </div>
             </div>
@@ -88,12 +102,15 @@ export default function HomePage() {
         {/* Yield Comparison Section */}
         <section className="space-y-6">
           <div className="text-center space-y-2">
-            <h2 className="text-2xl font-bold text-foreground">Top ETH Protocols</h2>
+            <h2 className="text-2xl font-bold text-foreground">
+              Top ETH Protocols
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Compare ETH yields across leading protocols. Real-time APY data, risk analysis, and TVL metrics for ETH staking and farming.
+              Compare ETH yields across leading protocols. Real-time APY data,
+              risk analysis, and TVL metrics for ETH staking and farming.
             </p>
           </div>
-          
+
           <YieldComparison />
         </section>
       </div>

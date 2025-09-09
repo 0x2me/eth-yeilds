@@ -196,7 +196,7 @@ const mockProtocols: Protocol[] = [
 ];
 
 const YieldComparison = () => {
-  const [protocols, setProtocols] = useState<Protocol[]>(mockProtocols);
+  const [protocols] = useState<Protocol[]>(mockProtocols);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRisk, setFilterRisk] = useState<string>("all");
   const [filterCategory, setFilterCategory] = useState<string>("all");
